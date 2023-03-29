@@ -29,3 +29,22 @@ const playPause = () => {
     playPauseButton.innerHTML = textButtonPlay;
   }
 };
+
+player.ontimeupdate = () => updateTime();
+
+const updateTime = () => {
+  const currentMinutes = Math.floor(player.currentTime / 60);
+  const currentSeconds = Math.floor(player.currentTime % 60);
+  currentTime.textContent = currentMinutes + ":" + formatZero(currentSeconds);
+
+  const durationFormatted = isNaN(player.duration) ? 0 : player.duration;
+  const durationMinutes = Math.floor(durationFormatted / 60);
+  const durationSeconds = Math.floor(durationFormatted % 60);
+  duration.textContent = durationMinutes + ":" + formatZero(durationSeconds);
+
+  const progressWidth = durationFormatted
+    ? (player.currentTime / durationFormatted) * 100
+    : 0;
+
+  progress.style.width = progressWidth + "%";
+};
