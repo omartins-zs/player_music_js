@@ -40,3 +40,28 @@
     font-size: 200px;
   }
 
+  #musicName {
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 30px;
+  }
+
+  .controls button {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+  }
+
+  .controls i {
+    font-size: 60px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #f7f7f7;
+    transition: all .2s;
+  }
+
+  .controls i:hover {
+    background-color: lightgray;
+  }
