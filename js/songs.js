@@ -12,6 +12,10 @@ export default [
       name: "Like That - Anno Domini Beats",
     },
     {
+      src: "./src/music/Ne-Yo - Because Of You.mp3",
+      name: "Ne-Yo - Because Of You",
+    },
+    {
       src: "./src/music/Shake - Anno Domini Beats.mp3",
       name: "Shake - Anno Domini Beats",
     },
